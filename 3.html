@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的數據分析作品集</title>
+  <style>
+    :root {
+      --main-color: #7ac7c4; /* 主色：柔和的藍綠色 */
+      --accent-color: #ffffff; /* 強調色：白色 */
+      --text-color: #333; /* 文字顏色 */
+      --bg-color: #f4f4f9; /* 背景色 */
+      --highlight-color: #f39c12; /* 高亮顏色 */
+      --card-bg: #ffffff; /* 卡片背景 */
+      --card-shadow: rgba(0, 0, 0, 0.1); /* 卡片陰影 */
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.3;
+      padding-bottom: 80px; /* 預留空間給回到頂端按鈕 */
+    }
+
+    header {
+      background-color: var(--main-color);
+      color: var(--accent-color);
+      padding: 2rem 0;
+      text-align: center;
+      border-bottom: 3px solid var(--accent-color);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent-color);
+      margin: 0 1rem;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--highlight-color);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0px 6px 20px var(--card-shadow);
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      margin-bottom: 1.5rem;
+      color: var(--main-color);
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--main-color);
+    }
+
+    .project-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px var(--card-shadow);
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 30px var(--card-shadow);
+    }
+
+    .project-card h3 {
+      font-size: 1.6rem;
+      color: var(--main-color);
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: var(--text-color);
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--highlight-color);
+      color: var(--accent-color);
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background-color: var(--main-color);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--bg-color);
+      font-size: 1rem;
+      color: #777;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--main-color);
+      color: var(--accent-color);
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0px 4px 12px var(--card-shadow);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .back-to-top:hover {
+      background-color: #55a5a3;
+      box-shadow: 0px 8px 24px var(--card-shadow);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>數據分析師｜個人網站</h1>
+    <nav>
+      <a href="#about">關於我</a>
+      <a href="#skills">技能</a>
+      <a href="#portfolio">作品集</a>
+      <a href="#contact">聯絡我</a>
+    </nav>
+  </header>
+
+  <!-- 關於我區域 -->
+  <section id="about">
+    <h2 class="section-title">關於我</h2>
+    <p>我是一名專注於數據分析和視覺化的數據科學家，擁有豐富的數據清理、預測建模以及結果解釋經驗。我擅長運用 Python、R、SQL 等工具進行數據處理與分析，並能夠把複雜的數據變得易於理解。</p>
+  </section>
+
+  <!-- 技能區域 -->
+  <section id="skills">
+    <h2 class="section-title">我的技能</h2>
+    <ul>
+      <li>數據清理與處理</li>
+      <li>數據可視化 (Matplotlib, Seaborn, Tableau)</li>
+      <li>機器學習 (Scikit-learn, TensorFlow)</li>
+      <li>SQL 資料庫管理</li>
+      <li>預測建模與統計分析</li>
+    </ul>
+  </section>
+
+  <!-- 作品集區域 -->
+  <section id="portfolio">
+    <h2 class="section-title">我的作品集</h2>
+
+    <div class="project-container">
+      <!-- 專案 1 -->
+      <div class="project-card">
+        <h3>專案名稱：數據清理與分析</h3>
+        <p>在這個專案中，我使用 Python 和 Pandas 進行數據清理，並利用統計分析方法從數據中提取有用的見解。最終結果幫助企業減少了 15% 的成本。</p>
+        <a href="https://github.com/你的用戶名/專案名稱" target="_blank">查看程式碼</a>
+      </div>
+
+      <!-- 專案 2 -->
+      <div class="project-card">
+        <h3>專案名稱：銷售趨勢預測</h3>
+        <p>這個專案展示了如何利用歷史銷售數據來預測未來的銷售趨勢。通過機器學習模型，我成功地提高了預測準確度，並幫助公司制定了更有效的營銷策略。</p>
+        <a href="https://github.com/你的用戶名/專案名稱" target="_blank">查看程式碼</a>
+      </div>
+
+      <!-- 專案 3 -->
+      <div class="project-card">
+        <h3>專案名稱：財務分析與可視化</h3>
+        <p>在這個專案中，我使用 Tableau 和 Excel 創建了動態的財務報表，幫助企業高層即時了解財務狀況並作出決策。</p>
+        <a href="https://github.com/你的用戶名/專案名稱" target="_blank">查看程式碼</a>
+      </div>
+
+      <!-- 專案 4 -->
+      <div class="project-card">
+        <h3>專案名稱：客戶行為分析</h3>
+        <p>通過分析客戶的交易數據，我建立了多個預測模型來判斷客戶的購買意圖，並根據結果提供個性化的行銷建議。</p>
+        <a href="https://github.com/你的用戶名/專案名稱" target="_blank">查看程式碼</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡我區域 -->
+  <section id="contact">
+    <h2 class="section-title">聯絡我</h2>
+    <p>如果你對我的作品集有任何疑問，或者有合作機會，請隨時聯絡我！</p>
+    <ul>
+      <li>Email: example@example.com</li>
+      <li>LinkedIn: <a href="https://linkedin.com" target="_blank">我的 LinkedIn</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 數據分析作品集 | 由我設計與開發</p>
+  </footer>
+
+  <button class="back-to-top" onclick="window.scrollTo(0, 0)">↑</button>
+
+  <script>
+    // 顯示回到頂端按鈕
+    window.onscroll = function() {
+      var button = document.querySelector('.back-to-top');
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.display = 'flex';
+      } else {
+        button.style.display = 'none';
+      }
+    };
+  </script>
+
+</body>
+</html>
